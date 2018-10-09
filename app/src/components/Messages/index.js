@@ -2,36 +2,34 @@
  * Npm import
  */
 import React from 'react';
- /*
- * Local import
- import Message from './Message';
- */
+import PropTypes from 'prop-types';
 
- /*
+
+/*
+ * Local import
+ */
+import Message from 'src/containers/Messages/Message';
+
+
+/*
  * Code
  */
-const Messages = () => (
-
+const Messages = ({ messageIds }) => (
   <div id="messages">
-
-    <div className="message message--myself">
-      <div className="message-username">Pseudo 1 (moi) :</div>
-      <div className="message-content">Hello world ;)</div>
-    </div>
-
-    <div className="message">
-      <div className="message-username">Pseudo 2 :</div>
-      <div className="message-content">Je suis du texte</div>
-    </div>
-
+    {messageIds.map(messageId => (
+      <Message
+        key={messageId}
+        id={messageId}
+      />
+    ))}
   </div>
-
 );
+Messages.propTypes = {
+  messageIds: PropTypes.arrayOf(PropTypes.number.isRequired).isRequired,
+};
 
 
-
- /*
+/*
  * Export default
  */
-
 export default Messages;

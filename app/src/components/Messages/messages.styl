@@ -1,21 +1,34 @@
 @require "app/styles/charte"
- /*
+
+
+/*
  * IDs
  */
 #messages
-	 height: 70vh
+	height: 65vh
+	overflow-y: auto
 
- /*
+
+/*
  * Classes
  */
- .message
-	 padding: 1em 2em
+.message
+	padding: 1em 2em
 
-	 &-username
-		 font-size: 1em
-		 text-transform: uppercase
-	 &-content
-		 font-size: 1.1em
-		 margin-top: 0.5em
-	 &--myself
-		 background: $background-message--myself
+	/*
+	 * Children
+	 */
+	&-username
+		text-transform: uppercase
+		font-size: .75em
+
+	&-content
+		font-size: 1.1em
+		margin-top: .25em
+
+
+	/*
+	 * Modifier
+	 */
+	&--myself
+		background: $background-message-myself
