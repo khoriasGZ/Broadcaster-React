@@ -1,14 +1,16 @@
 # Broadcaster-React-redux
 
-## NPM
+## Démarrer le projet
 
-* On `npm install || yarn` Ajouter les dépendances du projet.
+* 1. `yarn` Ajouter les dépendances du projet.
+* 2. `yarn start:node` Lance le serveur du projet.
+* 3. `yarn start:brunch` Compilation des fichiers du projet
+* 4.  Le projet se lance sur l'url: http://localhost:3000/ 
 
 ## Scripts
 
 * `yarn start:node` : pour lancer le projet (compilation, watch, etc.)
   
-
 * `yarn start:brunch` : pour coder l'application et compiler auto
 
 * `yarn build` : pour compiler le projet une seule fois
